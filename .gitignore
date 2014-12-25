@@ -1,8 +1,8 @@
 #ignore config files
 
-conf/*
+/conf/*
 
-twLogin/
+/twLogin/
 config.php
 functions.php
 
