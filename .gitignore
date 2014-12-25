@@ -2,8 +2,7 @@
 
 /conf/*
 
-/twLogin/
-config.php
-functions.php
+/twLogin/config.php
+/twLogin/functions.php
 
 
