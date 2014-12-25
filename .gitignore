@@ -1,0 +1,9 @@
+#ignore config files
+
+/conf/*
+
+/twLogin/
+config.php
+functions.php
+
+

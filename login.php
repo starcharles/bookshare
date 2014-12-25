@@ -1,7 +1,7 @@
 <?php
 session_start();
-require('config.php');
-require('functions.php');
+require($_SERVER['DOCUMENT_ROOT'] .'/bookshare/'.'config.php');
+require($_SERVER['DOCUMENT_ROOT'] .'/bookshare/'.'functions.php');
 
 
 if(!empty($_SESSION['me'])){
