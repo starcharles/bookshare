@@ -1,7 +1,8 @@
 <?php
 session_start();
-require($_SERVER['DOCUMENT_ROOT'] .'/bookshare/'.'config.php');
-require($_SERVER['DOCUMENT_ROOT'] .'/bookshare/'.'functions.php');
+require(dirname(__FILE__).'/config.php');
+require(dirname(__FILE__).'/functions.php');
+
 
 if(empty($_SESSION['me'])){
     header('Location:'.SITE_URL);
