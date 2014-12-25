@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require(dirname(__FILE__).'/conf/config.php');
-require(dirname(__FILE__).'/conf/functions.php');
+require('../conf/config.php');
+require('../conf/functions.php');
 
 
 if(empty($_SESSION['me'])){
@@ -73,7 +73,7 @@ if(empty($user['name'])){
               <?php foreach ($index as $key) : ?>
     <td><?php print h($book[$key]);?></td>
   <?php endforeach;?>
-  <td><form method="POST" action="rent/rental.php">
+  <td><form method="GET" action="rent/rental.php">
    <input type="hidden" name="ownerid" value="<?php print h($book['ownerid']); ?>">
   <button type="submit"  name="book_id" value="<?php print h($book['id']); ?>">レンタル申請！</button>
   </form>
