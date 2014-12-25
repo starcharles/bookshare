@@ -2,9 +2,6 @@
 session_start();
 
 
-//require($_SERVER['DOCUMENT_ROOT'] .'/bookshare/'.'config.php');
-//require($_SERVER['DOCUMENT_ROOT'] .'/bookshare/'.'functions.php');
-
 if(empty($_SESSION['me'])){
    header('Location:'.SITE_URL.'login.php');
     exit;

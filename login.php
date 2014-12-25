@@ -1,8 +1,7 @@
 <?php
 session_start();
-require(dirname(__FILE__).'/config.php');
-require(dirname(__FILE__).'/functions.php');
-
+require(dirname(__FILE__).'/conf/config.php');
+require(dirname(__FILE__).'/conf/functions.php');
 
 if(!empty($_SESSION['me'])){
     header('Location:'.SITE_URL);
@@ -67,7 +66,6 @@ if($_SERVER['REQUEST_METHOD'] != "POST"){
 
     if(empty($err)){
         $_SESSION['me'] = $me;
-        //var_dump($_SESSION['me']);
        header('Location: '.SITE_URL);
         exit;
     }

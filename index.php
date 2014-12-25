@@ -1,7 +1,8 @@
 <?php
 session_start();
-require(dirname(__FILE__).'/config.php');
-require(dirname(__FILE__).'/functions.php');
+
+require(dirname(__FILE__).'/conf/config.php');
+require(dirname(__FILE__).'/conf/functions.php');
 
 session_regenerate(); //セッションハイジャック対策
 
@@ -36,7 +37,7 @@ foreach ($dbh->query($sql) as $row) {
 </head>
 <body>
 <div>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/bookshare/header.php');?>
+<?php include(dirname(__FILE__).'/header.php');?>
 
 </div>
 

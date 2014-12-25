@@ -1,7 +1,7 @@
 <?php
 session_start();
-require(dirname(__FILE__).'/config.php');
-require(dirname(__FILE__).'/functions.php');
+require(dirname(__FILE__).'/conf/config.php');
+require(dirname(__FILE__).'/conf/functions.php');
 
 
 if(empty($_SESSION['me'])){
@@ -96,8 +96,7 @@ if($_SERVER['REQUEST_METHOD'] != "POST"){
 </head>
 <body>
 <div>
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/bookshare/header.php');?>
-
+ <?php include(dirname(__FILE__).'/header.php');?>
 </div>
 
 <div>

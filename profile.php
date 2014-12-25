@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-require(dirname(__FILE__).'/config.php');
-require(dirname(__FILE__).'/functions.php');
-//require('functions.php');
+require(dirname(__FILE__).'/conf/config.php');
+require(dirname(__FILE__).'/conf/functions.php');
+
 
 if(empty($_SESSION['me'])){
    header('Location:'.SITE_URL.'login.php');
@@ -13,6 +13,7 @@ if(empty($_SESSION['me'])){
 $me=$_SESSION['me'];
 
 $dbh = connectDb();
+
 
 $sql="select * from users where id= :id limit 1";
 $stmt=$dbh->prepare($sql);
@@ -37,7 +38,7 @@ if(!$user){
 
     $index =array("title","author","year","category","recommend");
 
-
+var_dump($user);
 ?>
 
 
@@ -49,7 +50,7 @@ if(!$user){
 </head>
 <body>
 <div>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/bookshare/header.php');?>
+<?php include(dirname(__FILE__).'/header.php');?>
 
 </div>
 <h1><?php echo h($user['name']); ?>さんのアイテム一覧</h1>
