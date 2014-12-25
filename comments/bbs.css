@@ -1,0 +1,28 @@
+h1{
+     text-align:center;  
+}
+
+.input{
+
+
+}
+
+li{
+    font-size:20px;
+    font-family: sans-serif;
+}
+
+#header{
+          height: 40px;
+          background: #4c66a4;
+        }
+      #contents div{
+        height: 700px;
+      }
+      #sidebar{
+        background: #e9eaed;
+      }
+
+      #ad{
+        background: #e9eaed;
+          }    
