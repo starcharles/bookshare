@@ -20,6 +20,8 @@ $book_id=$_POST['book_id'];
 if($me['id']==$ownerid){
   print "自分の持ち物です";
   exit;
+}else{
+    //print "hello!!";
 }
 
 //本のデータ取得
@@ -95,18 +97,17 @@ if(empty($user['name'])){
 </tr>
 </table>
 
-
 <div>
-<p>
-    この本の貸出申請をしてもよろしいですか?
-    <form method="POST" action="rental_result.php">
+    この本の貸出申請をしてもよろしいですか？
+    <p>
+    <form methid="POST" action="rental_result.php">
         <input type="hidden" name="ownerid" value="<?php print $ownerid; ?>">
-         <input type="hidden" name="book_id" value="<?php print $book_id; ?>">
+         <input type="hidden" name="ownerid" value="<?php print $book_id; ?>">
         <button type="submit">はい</button>
     </form>
     </p>
 </div>
-<p><a href="../index.php">一覧へ戻る</a></p>
+<p><a href="index.php">一覧へ戻る</a></p>
 
 
 </body>
