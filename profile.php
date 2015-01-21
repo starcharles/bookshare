@@ -54,6 +54,7 @@ if(empty($user['name'])){
     <meta charset="UTF-8">
     <title>ユーザープロフィール</title>
 </head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
 <body>
 <div>
 <?php include(dirname(__FILE__).'/header.php');?>
@@ -83,7 +84,24 @@ if(empty($user['name'])){
 
 <p><a href="index.php">一覧へ</a></p>
 
+<script type="text/javascript">
+  var myId=<?php echo $me['id'] ;?>;
+  var ownerid=<?php echo $ownerid;?>;
+//  alert(myId+":"+ownerid);
 
+
+$('form').submit(function(){
+
+  if(myId===ownerid){
+      alert("あなたの所持品です");
+      return false;
+  }else{
+    return true;
+  }
+
+});
+
+</script>
 </body>
 </html>
 

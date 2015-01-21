@@ -73,36 +73,61 @@ if($_SERVER['REQUEST_METHOD'] != "POST"){
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <title>ログイン</title>
+<!-- コンパイルして圧縮された最新版の CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- オプションのテーマ -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- コンパイルして圧縮された最新版の JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
+<style>
+
+.container{
+    margin : 20px; 
+    padding : 0 ; 
+    //background-color:   #87CEFA; 
+}
+</style>
+
 <body>
+<ul  class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
 
-<div><a href="signup.php">新規ユーザー登録はこちら</a></div>
-<div>
-<h1>ログイン</h1>
-<form action="" method="POST">
-<p>E-mail : <input type ="text" name="email" value="<?php echo h($email);  ?>"><?php echo h($err['email']);  ?></p>
-<p>Password : <input type ="password" name="password" value=""><?php echo h($err['password']);  ?></p>
-<input type ="hidden" name="token" value="<?php echo h($_SESSION['token']); ?>">
-<p><input type ="submit" value="login"></p>
-</form>
+<div class="container">
+<div class="row">
+    <div class="col-xs-5 col-xs-offset-1">
+        <p><a href="signup.php">新規ユーザー登録はこちら</a><p>
+        <button type ="submit" class="btn btn-default"><a href="twLogin/getToken.php">Twitter login</a></button>
+        <p>（Twitter認証画面へ遷移します)</p>
+    </div>
+
+    <div  class="col-xs-4">
+        <form action="" method="POST">
+        <fieldset>
+        <div class="form-group">
+            <legend>ログイン</legend>
+            E-mail : <input type ="text" name="email" class="form-control" value="<?php echo h($email);  ?>"><?php echo h($err['email']);  ?>
+        </div>
+        <div class="form-group">
+            Password : <input type ="password" name="password" class="form-control" value=""><?php echo h($err['password']);  ?>
+        </div>
+        <input type ="hidden" name="token" value="<?php echo h($_SESSION['token']); ?>">
+        <button type ="submit" class="btn btn-default"><span class="glyphicon glyphicon-log-in"></span> login</button>
+        </form>
+         </fieldset>
+    </div>
 </div>
-
-<div>
-<h1><a href="twLogin/getToken.php">Twitterでユーザー登録・ログインする</a></h1>
-<p>（Twitter認証画面へ遷移します）</p>
-
 </div>
-
-
-
-
-
 </body>
 
 </html>

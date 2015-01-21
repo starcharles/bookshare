@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ログイン</title>
+<!-- コンパイルして圧縮された最新版の CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- オプションのテーマ -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- コンパイルして圧縮された最新版の JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <div class="col-md-4"><a href="signup.php">新規ユーザー登録はこちら</a>
+    </div>
+    <div  class="col-md-4">
+
+    <div>
+    <p class="">ログイン</p>
+    <form action="" method="POST">
+    <p>E-mail : <input type ="text" name="email" value="<?php echo h($email);  ?>"><?php echo h($err['email']);  ?></p>
+    <p>Password : <input type ="password" name="password" value=""><?php echo h($err['password']);  ?></p>
+    <input type ="hidden" name="token" value="<?php echo h($_SESSION['token']); ?>">
+    <p><input type ="submit" value="login"></p>
+    </form>
+    </div>
+    </div>
+
+  <div class="col-md-4">.col-md-4</div>
+
+</div>
+</div>
+
+
+    <div>
+    <a href="twLogin/getToken.php">Twitter</a>
+    <p>（Twitter認証画面へ遷移します）</p>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+
