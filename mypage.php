@@ -23,23 +23,24 @@ $me=$_SESSION['me'];
     <title>ユーザーマイページ</title>
 </head>
 <body>
-<div>
+<div id="header">
 <?php include(dirname(__FILE__).'/header.php');?>
 
 </div>
-<div>
-    <h1>所持アイテムの変更・削除</h1>
-
+<div><a href="delUser.php">自分のアカウントを削除する</a>
 </div>
 
-<div>
-<h2>ユーザー削除</h2>
 
-</div>
 <div>
-    <h1>貸借一覧</h1>
+<p>status</p>
+	<!-- <?php include('rent.php');?> -->
+</div><!--- -->
 
-</div>
+<div>
+    <p>所持アイテムの変更・削除</p>
+<!--- <?php include('my_items.php');?> -->
+
+</div><!--- -->
 
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+//ini_set( 'display_errors', 1 );
 require(dirname(__FILE__).'/conf/config.php');
 require(dirname(__FILE__).'/conf/functions.php');
 
@@ -41,8 +42,12 @@ foreach ($dbh->query($sql) as $row) {
 
 </div>
 
-<div class="child1">
-<h1>ユーザー一覧</h1>
+<div class="container">
+<div class="row">
+    <div class="col-xs-5 col-xs-offset-1">
+    <p><a href="./book_form.php">本を登録する</a></p>
+
+<p>ユーザー一覧</p>
 
 <ul>
 <?php foreach ($users as $user) : ?>
@@ -55,14 +60,18 @@ foreach ($dbh->query($sql) as $row) {
 <?php endforeach; ?>
 </ul>
 
-<h2><a href="./book_form.php">本の登録</a></h2>
-</div>
 
-<div class="child2">
+    </div><!--col-->
 
-<?php include(dirname(__FILE__).'/comments/bbs.php'); ?>
 
-</div>
+     <div  class="col-xs-4">
+        <?php include(dirname(__FILE__).'/comments/bbs.php'); ?>
+    </div>
+
+</div><!--row-->
+</div><!--container-->
+
+
 
 
 </body>

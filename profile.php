@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 require(dirname(__FILE__).'/conf/config.php');
 require(dirname(__FILE__).'/conf/functions.php');
 

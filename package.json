@@ -1,0 +1,24 @@
+{
+  "name": "local.bookshare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "browser-sync init",
+    "start": "browser-sync start --server --files='./*.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/starcharles/bookshare.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/starcharles/bookshare/issues"
+  },
+  "homepage": "https://github.com/starcharles/bookshare",
+  "devDependencies": {
+    "browser-sync": "^1.9.1",
+    "gulp": "^3.8.10"
+  }
+}

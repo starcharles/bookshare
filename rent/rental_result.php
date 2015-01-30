@@ -100,7 +100,7 @@ if(empty($user['name'])){
 <div>
     この本の貸出申請をしてもよろしいですか？
     <p>
-    <form methid="POST" action="rental_result.php">
+    <form method="POST" action="rental_result.php">
         <input type="hidden" name="ownerid" value="<?php print $ownerid; ?>">
          <input type="hidden" name="ownerid" value="<?php print $book_id; ?>">
         <button type="submit">はい</button>
